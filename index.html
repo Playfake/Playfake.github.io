@@ -71,7 +71,9 @@
 					<!--<a href="#" class="button button-stripe">Learn more</a> -->
 				</div>
 				<!-- /.btn-app-store -->
-
+			<div class="buttons-wrapper" id="bt-download-error">
+				<p style="color:red">Download link available for Android only!</p>
+			</div>
           </div> <!-- /.col-md-7 -->
 
           <div class="col-md-5 col-sm-5">
@@ -297,9 +299,11 @@
 	<script type="text/javascript">
 	var ua = navigator.userAgent.toLowerCase();
 	var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-    if (isAndroid){
+    if (!isAndroid){
      document.getElementById('bt-download').style.display = 'none';
-     }
+     }else{
+	 document.getElementById('bt-download-error').style.display = 'none';
+	 }
 </script>
   </body>
 </html>
