@@ -295,7 +295,9 @@
     <script src="js/customScripts.js"></script>
 	
 	<script type="text/javascript">
-    if ((/Android/i.test(navigator.userAgent))){
+	var ua = navigator.userAgent.toLowerCase();
+	var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+    if (isAndroid){
      document.getElementById('bt-download').style.display = 'none';
      }
 </script>
