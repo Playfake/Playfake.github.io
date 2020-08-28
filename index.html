@@ -66,7 +66,7 @@
             <p>Create realistic WhatsApp fake chat screens and Prank your friends</p>
 
             <!-- Button -->
-            <div class="buttons-wrapper">
+            <div class="buttons-wrapper" id="bt-download">
 					<a href="https://github.com/Playfake/Playfake.github.io/releases/download/WhatsMock_v1.8.1/WhatsMockFree_v1.8.1.apk" class="button"><b>Download App</b></a>
 					<!--<a href="#" class="button button-stripe">Learn more</a> -->
 				</div>
@@ -293,5 +293,11 @@
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/customScripts.js"></script>
+	
+	<script type="text/javascript">
+    if ((/Android/i.test(navigator.userAgent))){
+     document.getElementById('bt-download').style.display = 'none';
+     }
+</script>
   </body>
 </html>
