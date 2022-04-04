@@ -2458,10 +2458,6 @@
         padding: 0
     }
 
-    table td, table th {
-        padding: 0
-    }
-
     .c12 {
         margin-left: 36pt;
         padding-top: 12pt;
@@ -2591,6 +2587,15 @@
         padding: 72pt 72pt 72pt 72pt
     }
 
+
+    .c31b {
+        background-color: #ffffff;
+        max-width: 1200px;
+        margin: auto;
+        padding: 72pt 72pt 72pt 72pt
+    }
+
+
     .c20 {
         color: #595959;
         text-decoration: none;
@@ -2681,6 +2686,47 @@
 
     .c22 {
         font-style: italic
+    }
+
+    .c32 {
+        font-size: 18pt
+    }
+
+     table, td, th {
+        padding: 20px;
+        border: 1px solid;
+        border-color: #d3d3d3;
+        border-collapse: collapse;
+    }
+
+    th{
+        border: 0px;
+        font-size: 16pt;
+        font-weight: 700;
+    }
+
+    .t1 {
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-size: 13pt;
+        font-family: "Arial";
+        font-style: normal
+    }
+
+    .t2 {
+        text-decoration-skip-ink: none;
+        font-size: 11.5pt;
+        -webkit-text-decoration-skip: none;
+        color: #1155cc;
+        text-decoration: underline;
+        text-align: center;
+    }
+
+    .t2b {
+        font-weight: 500;
+        font-size: 12pt;
     }
 
     .title {
@@ -2799,4 +2845,8 @@
         orphans: 2;
         widows: 2;
         text-align: left
+    }
+    
+    a::after {
+        content: attr(href);
     }
