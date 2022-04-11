@@ -2581,20 +2581,23 @@ ol {
 }
 
 .c31 {
-    background-color: #ffffff;
-    max-width: 800px;
+    background-color: #ebf3ff;
     margin: auto;
-    padding: 72pt 72pt 72pt 72pt
 }
-
 
 .c31b {
     background-color: #ffffff;
     max-width: 1200px;
     margin: auto;
-    padding: 72pt 72pt 72pt 72pt
+    padding: 72pt 72pt 72pt 72pt;
 }
 
+.c31c {
+    background-color: #ffffff;
+    max-width: 800px;
+    margin: auto;
+    padding: 72pt 72pt 72pt 72pt;
+}
 
 .c20 {
     color: #595959;
