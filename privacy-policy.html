@@ -1,8 +1,148 @@
-<html>
+<!DOCTYPE html>
 
 <head>
 	<meta content="text/html; charset=UTF-8" http-equiv="content-type">
 	<link href="css/styles2.css" rel="stylesheet">
+	<script>
+		window.onload = function () {
+			var url = window.location;
+			let params = new URLSearchParams(url.search);
+			if (params.has('app')) {
+				var app = params.get('app');
+				var pro = '0';
+				if (params.has('pro')) {
+					pro = params.get('pro');
+				}
+				if (app.trim() === 'whatsmock') {
+					if (pro.trim() === '1') {
+						hasService('google_analytics', 'firebase')
+					} else {
+						hasService('google_analytics', 'firebase', 'unity', 'startapp', 'ironsrc', 'chartboost', 'vungle', 'inmobi', 'applovin', 'adcolony');
+					}
+				}
+				if (app.trim() === 'funsta') {
+					if (pro.trim() === '1') {
+						hasService('google_analytics', 'firebase')
+					} else {
+						hasService('google_analytics', 'firebase', 'startapp', 'unity', 'ironsrc', 'inmobi', 'applovin');
+					}
+				}
+				if (app.trim() === 'tikjoke') {
+					if (pro.trim() === '1') {
+						hasService('google_analytics', 'firebase')
+					} else {
+						hasService('google_analytics', 'firebase');
+					}
+				}
+				if (app.trim() === 'telefun') {
+					if (pro.trim() === '1') {
+						hasService('google_analytics', 'firebase')
+					} else {
+						hasService('google_analytics', 'firebase', 'startapp', 'ironsrc', 'chartboost');
+					}
+				}
+				if (app.trim() === 'wowber') {
+					if (pro.trim() === '1') {
+						hasService('google_analytics', 'firebase')
+					} else {
+						hasService('google_analytics', 'firebase', 'unity', 'startapp', 'ironsrc', 'applovin');
+					}
+				}
+				if (app.trim() === 'social_stack') {
+					if (pro.trim() === '1') {
+						hasService('google_analytics', 'firebase')
+					} else {
+						hasService('google_analytics', 'firebase');
+					}
+				}
+			}
+		}
+
+		function hasService() {
+			var google_analytics = false, firebase = false, admob = false, unity = false, applovin = false, vungle = false, startapp = false, adcolony = false, ironsrc = false, chartboost = false, inmobi = false;
+			for (var i = 0; i < arguments.length; i++) {
+				switch (arguments[i]) {
+					case 'google_analytics':
+						google_analytics = true;
+						break;
+					case 'firebase':
+						firebase = true;
+						break;
+					case 'admob':
+						admob = true;
+						break;
+					case 'unity':
+						unity = true;
+						break;
+					case 'applovin':
+						applovin = true;
+						break;
+					case 'vungle':
+						vungle = true;
+						break;
+					case 'startapp':
+						startapp = true;
+						break;
+					case 'adcolony':
+						adcolony = true;
+						break;
+					case 'ironsrc':
+						ironsrc = true;
+						break;
+					case 'chartboost':
+						chartboost = true;
+						break;
+					case 'inmobi':
+						inmobi = true;
+						break;
+				}
+			}
+			hideService(google_analytics, firebase, admob, unity, applovin, vungle, startapp, adcolony, ironsrc, chartboost, inmobi);
+		}
+
+		function hideService(google_analytics, firebase, admob, unity, applovin, vungle, startapp, adcolony, ironsrc, chartboost, inmobi) {
+			if (!google_analytics) {
+				hideElement('google_analytics')
+			}
+			if (!firebase) {
+				hideElement('firebase')
+			}
+			if (!admob) {
+				hideElement('admob')
+			}
+			if (!unity) {
+				hideElement('unity')
+			}
+			if (!applovin) {
+				hideElement('applovin')
+			}
+			if (!vungle) {
+				hideElement('vungle')
+			}
+			if (!startapp) {
+				hideElement('startapp')
+			}
+			if (!adcolony) {
+				hideElement('adcolony')
+			}
+			if (!ironsrc) {
+				hideElement('ironsrc')
+			}
+			if (!chartboost) {
+				hideElement('chartboost')
+			}
+			if (!inmobi) {
+				hideElement('inmobi')
+			}
+		}
+
+		function hideElement(eid) {
+			var ele = document.getElementById(eid);
+			if (ele != null) {
+				ele.style.display = 'none';
+			}
+		}
+	</script>
 </head>
 
 <body class="c31">
@@ -304,39 +444,47 @@
 				by the app</span>
 		</p>
 		<ul>
-			<li class="c10">
+			<li class="c10" id="google_analytics">
 				<a class="c9b" href="https://firebase.google.com/policies/analytics" target="_blank"
 					rel="noopener noreferrer">Google Analytics for Firebase</a>
 			</li>
-			<li class="c10">
+			<li class="c10" id="firebase">
 				<a class="c9b" href="https://firebase.google.com/support/privacy/" target="_blank"
 					rel="noopener noreferrer">Firebase Crashlytics</a>
 			</li>
-			<li class="c10">
+			<li class="c10" id="admob">
+				<a class="c9b" href="https://policies.google.com/privacy" target="_blank"
+					rel="noopener noreferrer">Admob</a>
+			</li>
+			<li class="c10" id="unity">
 				<a class="c9b" href="https://unity3d.com/legal/privacy-policy" target="_blank"
 					rel="noopener noreferrer">Unity</a>
 			</li>
-			<li class="c10">
+			<li class="c10" id="applovin">
 				<a class="c9b" href="https://www.applovin.com/privacy/" target="_blank"
 					rel="noopener noreferrer">AppLovin</a>
 			</li>
-			<li class="c10">
+			<li class="c10" id="vungle">
 				<a class="c9b" href="https://vungle.com/privacy/" target="_blank" rel="noopener noreferrer">Vungle</a>
 			</li>
-			<li class="c10">
+			<li class="c10" id="startapp">
 				<a class="c9b" href="https://www.startapp.com/privacy/" target="_blank"
 					rel="noopener noreferrer">StartApp</a>
 			</li>
-			<li class="c10">
+			<li class="c10" id="adcolony">
 				<a class="c9b" href="https://www.adcolony.com/privacy-policy/" target="_blank"
 					rel="noopener noreferrer">AdColony</a>
 			</li>
-			<li class="c10">
+			<li class="c10" id="ironsrc">
 				<a class="c9b"
 					href="https://developers.ironsrc.com/ironsource-mobile/air/ironsource-mobile-privacy-policy/"
 					target="_blank" rel="noopener noreferrer">ironSource</a>
 			</li>
-			<li class="c10">
+			<li class="c10" id="chartboost">
+				<a class="c9b" href="https://answers.chartboost.com/en-us/articles/200780269" target="_blank"
+					rel="noopener noreferrer">Chartboost</a>
+			</li>
+			<li class="c10" id="inmobi">
 				<a class="c9b" href="https://www.inmobi.com/privacy-policy-for-eea" target="_blank"
 					rel="noopener noreferrer">InMobi</a>
 			</li>
