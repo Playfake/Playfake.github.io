@@ -2767,7 +2767,8 @@ th {
 li {
     color: #000000;
     font-size: 11pt;
-    font-family: "Arial"
+    font-family: "Arial";
+    margin: 10px 0;
 }
 
 p {
