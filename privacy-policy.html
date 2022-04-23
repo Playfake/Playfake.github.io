@@ -13,48 +13,65 @@
 				if (params.has('pro')) {
 					pro = params.get('pro');
 				}
-				if (app.trim() === 'whatsmock') {
-					if (pro.trim() === '1') {
-						hasService('google_analytics', 'firebase')
-					} else {
-						hasService('google_analytics', 'firebase', 'unity', 'startapp', 'ironsrc', 'chartboost', 'vungle', 'inmobi', 'applovin', 'adcolony');
+				switch (app.trim()) {
+					case 'whatsmock': {
+						if (pro.trim() === '1') {
+							hasService('google_analytics', 'firebase');
+						} else {
+							hasService('google_analytics', 'firebase', 'unity', 'startapp', 'ironsrc', 'chartboost', 'vungle', 'inmobi', 'applovin', 'adcolony');
+						}
 					}
-				}
-				if (app.trim() === 'funsta') {
-					if (pro.trim() === '1') {
-						hasService('google_analytics', 'firebase')
-					} else {
-						hasService('google_analytics', 'firebase', 'startapp', 'unity', 'ironsrc', 'inmobi', 'applovin');
+						break;
+					case 'funsta': {
+						if (pro.trim() === '1') {
+							hasService('google_analytics', 'firebase');
+						} else {
+							hasService('google_analytics', 'firebase', 'startapp', 'unity', 'ironsrc', 'inmobi', 'applovin');
+						}
 					}
-				}
-				if (app.trim() === 'tikjoke') {
-					if (pro.trim() === '1') {
-						hasService('google_analytics', 'firebase')
-					} else {
-						hasService('google_analytics', 'firebase');
+						break;
+					case 'tikjoke': {
+						if (pro.trim() === '1') {
+							hasService('google_analytics', 'firebase');
+						} else {
+							hasService('google_analytics', 'firebase');
+						}
 					}
-				}
-				if (app.trim() === 'telefun') {
-					if (pro.trim() === '1') {
-						hasService('google_analytics', 'firebase')
-					} else {
-						hasService('google_analytics', 'firebase', 'startapp', 'ironsrc', 'chartboost');
+						break;
+					case 'telefun': {
+						if (pro.trim() === '1') {
+							hasService('google_analytics', 'firebase');
+						} else {
+							hasService('google_analytics', 'firebase', 'startapp', 'ironsrc', 'chartboost');
+						}
 					}
-				}
-				if (app.trim() === 'wowber') {
-					if (pro.trim() === '1') {
-						hasService('google_analytics', 'firebase')
-					} else {
-						hasService('google_analytics', 'firebase', 'unity', 'startapp', 'ironsrc', 'applovin');
+						break;
+					case 'wowber': {
+						if (pro.trim() === '1') {
+							hasService('google_analytics', 'firebase');
+						} else {
+							hasService('google_analytics', 'firebase', 'unity', 'startapp', 'ironsrc', 'applovin');
+						}
 					}
-				}
-				if (app.trim() === 'social_stack') {
-					if (pro.trim() === '1') {
-						hasService('google_analytics', 'firebase')
-					} else {
-						hasService('google_analytics', 'firebase');
+						break;
+					case 'fakenger': {
+						if (pro.trim() === '1') {
+							hasService('google_analytics', 'firebase');
+						} else {
+							hasService('google_analytics', 'firebase');
+						}
 					}
+						break;
+					case 'social_stack': {
+						if (pro.trim() === '1') {
+							hasService('google_analytics', 'firebase');
+						} else {
+							hasService('google_analytics', 'firebase');
+						}
+					}
+						break;
 				}
+
 			}
 		}
 
@@ -102,37 +119,37 @@
 
 		function hideService(google_analytics, firebase, admob, unity, applovin, vungle, startapp, adcolony, ironsrc, chartboost, inmobi) {
 			if (!google_analytics) {
-				hideElement('google_analytics')
+				hideElement('google_analytics');
 			}
 			if (!firebase) {
-				hideElement('firebase')
+				hideElement('firebase');
 			}
 			if (!admob) {
-				hideElement('admob')
+				hideElement('admob');
 			}
 			if (!unity) {
-				hideElement('unity')
+				hideElement('unity');
 			}
 			if (!applovin) {
-				hideElement('applovin')
+				hideElement('applovin');
 			}
 			if (!vungle) {
-				hideElement('vungle')
+				hideElement('vungle');
 			}
 			if (!startapp) {
-				hideElement('startapp')
+				hideElement('startapp');
 			}
 			if (!adcolony) {
-				hideElement('adcolony')
+				hideElement('adcolony');
 			}
 			if (!ironsrc) {
-				hideElement('ironsrc')
+				hideElement('ironsrc');
 			}
 			if (!chartboost) {
-				hideElement('chartboost')
+				hideElement('chartboost');
 			}
 			if (!inmobi) {
-				hideElement('inmobi')
+				hideElement('inmobi');
 			}
 		}
 
